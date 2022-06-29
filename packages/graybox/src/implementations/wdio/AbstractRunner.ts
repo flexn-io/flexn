@@ -1,5 +1,3 @@
-import type ExpectWebdriverIO from 'expect-webdriverio';
-
 abstract class AbstractRunner {
     // launch app
     abstract launchApp(): void;
@@ -32,18 +30,26 @@ abstract class AbstractRunner {
 
     abstract pressButtonSelect(n: number): void;
 
+    abstract expectToBeFocusedById(selector: string): any;
+
+    abstract expectToBeFocusedByText(selector: string): any;
+
+    abstract waitForFocusedById(selector: string): void;
+
+    abstract waitForFocusedByText(selector: string): void;
+
     // expect toBeExisting
     expectToBeExistingById = async (selector: string) => {
         const element = await this.getElementById(selector);
         if (element) {
-            await expect<ExpectWebdriverIO.Expect>(element).toBeExisting();
+            await expect(element).toBeExisting();
         }
     };
 
     expectToBeExistingByText = async (selector: string) => {
         const element = await this.getElementByText(selector);
         if (element) {
-            await expect<ExpectWebdriverIO.Expect>(element).toBeExisting();
+            await expect(element).toBeExisting();
         }
     };
 
@@ -51,14 +57,14 @@ abstract class AbstractRunner {
     expectToBeDisplayedById = async (selector: string) => {
         const element = await this.getElementById(selector);
         if (element) {
-            await expect<ExpectWebdriverIO.Expect>(element).toBeDisplayed();
+            await expect(element).toBeDisplayed();
         }
     };
 
     expectToBeDisplayedByText = async (selector: string) => {
         const element = await this.getElementByText(selector);
         if (element) {
-            await expect<ExpectWebdriverIO.Expect>(element).toBeDisplayed();
+            await expect(element).toBeDisplayed();
         }
     };
 
@@ -66,22 +72,14 @@ abstract class AbstractRunner {
     expectToBeClickableById = async (selector: string) => {
         const element = await this.getElementById(selector);
         if (element) {
-            await expect<ExpectWebdriverIO.Expect>(element).toBeClickable();
+            await expect(element).toBeClickable();
         }
     };
 
     expectToBeClickableByText = async (selector: string) => {
         const element = await this.getElementByText(selector);
         if (element) {
-            await expect<ExpectWebdriverIO.Expect>(element).toBeClickable();
-        }
-    };
-
-    // expect toHaveText
-    expectToHaveTextById = async (selector: string, text: string) => {
-        const element = await this.getElementById(selector);
-        if (element) {
-            await expect<ExpectWebdriverIO.Expect>(element).toHaveText(text);
+            await expect(element).toBeClickable();
         }
     };
 

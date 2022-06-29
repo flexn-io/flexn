@@ -68,6 +68,22 @@ class IosRunner extends AbstractRunner {
     pressButtonSelect = () => {
         // do nothing
     };
+
+    expectToBeFocusedById = () => {
+        // do nothing
+    };
+
+    expectToBeFocusedByText = () => {
+        // do nothing
+    };
+
+    waitForFocusedById = () => {
+        // do nothing
+    };
+
+    waitForFocusedByText = () => {
+        // do nothing
+    };
 }
 
 export default IosRunner;

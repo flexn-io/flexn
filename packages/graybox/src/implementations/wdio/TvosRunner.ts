@@ -53,6 +53,42 @@ class TvosRunner extends AbstractRunner {
     pressButtonSelect = async (n: number) => {
         await pressButtonIos(n, 'select');
     };
+
+    expectToBeFocusedById = async (selector: string) => {
+        const element = await this.getElementById(selector);
+        if (element) {
+            await expect(element).toHaveAttribute('focused', 'true');
+        }
+    };
+
+    expectToBeFocusedByText = async (selector: string) => {
+        const element = await this.getElementByText(selector);
+        if (element) {
+            await expect(element).toHaveAttribute('focused', 'true');
+        }
+    };
+
+    waitForFocusedById = async (selector: string) => {
+        const element = await this.getElementById(selector);
+        if (element) {
+            await element.waitUntil(async function () {
+                return (await element.getAttribute('focused')) === 'true';
+            }, {
+                timeout: 60000,
+            });
+        }
+    };
+
+    waitForFocusedByText = async (selector: string) => {
+        const element = await this.getElementByText(selector);
+        if (element) {
+            await element.waitUntil(async function () {
+                return (await element.getAttribute('focused')) === 'true';
+            }, {
+                timeout: 60000,
+            });
+        }
+    };
 }
 
 export default TvosRunner;
