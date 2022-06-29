@@ -69,7 +69,7 @@ const Menu = (props) => {
                 onEnterPress={() => {
                     navigate(ROUTES.HOME, '/');
                 }}
-                {...testProps('"flexn-components-button-home"')}
+                {...testProps('flexn-components-button-home')}
             />
             <Button
                 title="My Modal"

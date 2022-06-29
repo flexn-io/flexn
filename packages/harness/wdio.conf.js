@@ -1,4 +1,3 @@
-
 const fs = require('fs');
 const path = require('path');
 
@@ -13,21 +12,21 @@ const capabilities = {
     ios: [
         {
             platformName: 'iOS',
-            deviceName: 'iPhone 11',
-            platformVersion: '15.2',
+            deviceName: 'iPhone 12',
+            platformVersion: '15.5',
             automationName: 'XCUITest',
             bundleId: 'io.flexn.harness.test',
-            app: 'platformBuilds/harness_ios/build/RNVApp/Build/Products/Release-iphonesimulator/RNVApp.app'
+            app: 'platformBuilds/harness_ios/build/RNVApp/Build/Products/Debug-iphonesimulator/RNVApp.app'
         },
     ],
     tvos: [
         {
             platformName: 'tvOS',
             deviceName: 'Apple TV',
-            platformVersion: '15.2',
+            platformVersion: '15.4',
             automationName: 'XCUITest',
             bundleId: 'io.flexn.harness.test',
-            app: 'platformBuilds/harness_tvos/build/RNVAppTVOS/Build/Products/Release-appletvsimulator/RNVAppTVOS.app'
+            app: 'platformBuilds/harness_tvos/build/RNVAppTVOS/Build/Products/Debug-appletvsimulator/RNVAppTVOS.app'
         },
     ],
     android: [
@@ -38,7 +37,7 @@ const capabilities = {
             automationName: 'UiAutomator2',
             appPackage: 'io.flexn.harness.test',
             appActivity: 'io.flexn.harness.test.MainActivity',
-            app: 'platformBuilds/harness_android/app/build/outputs/apk/release/app-release.apk'
+            app: 'platformBuilds/harness_android/app/build/outputs/apk/debug/app-debug.apk'
         },
     ],
     androidtv: [
@@ -49,7 +48,7 @@ const capabilities = {
             automationName: 'UiAutomator2',
             appPackage: 'io.flexn.harness.test',
             appActivity: 'io.flexn.harness.test.MainActivity',
-            app: 'platformBuilds/harness_androidtv/app/build/outputs/apk/release/app-release.apk'
+            app: 'platformBuilds/harness_androidtv/app/build/outputs/apk/debug/app-debug.apk'
         },
     ],
     macos: [

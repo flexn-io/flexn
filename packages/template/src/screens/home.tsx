@@ -27,9 +27,9 @@ const ScreenHome = ({ navigation }: { navigation?: any }) => {
                 ref={swRef}
                 contentContainerStyle={theme.styles.container}
             >
-                <Image style={theme.styles.image} source={ICON_LOGO} />
-                <Text style={theme.styles.textH1}>{'Flexn SDK Example'}</Text>
-                <Text style={theme.styles.textH2}>v {packageJson.version}</Text>
+                <Image style={theme.styles.image} source={ICON_LOGO} {...testProps('template-home-screen-flexn-image')} />
+                <Text style={theme.styles.textH1} {...testProps('template-home-screen-welcome-message-text')} >{'Flexn SDK Example'} </Text>
+                <Text style={theme.styles.textH2} {...testProps('template-home-screen-version-number-text')} >v {packageJson.version} </Text>
                 <Text style={theme.styles.textH3}>{`platform: ${Api.platform}`}</Text>
                 <Text style={theme.styles.textH3}>{`factor: ${Api.formFactor}`}</Text>
                 <Text style={theme.styles.textH3}>{`engine: ${Api.engine}`}</Text>
@@ -44,7 +44,7 @@ const ScreenHome = ({ navigation }: { navigation?: any }) => {
                         animatorOptions: focusAnimation,
                         forbiddenFocusDirections: ['up'],
                     }}
-                    {...testProps('template-screen-home-try-me-button')}
+                    {...testProps('template-home-screen-try-me-button')}
                 >
                     <Text style={theme.styles.buttonText}>Try Me!</Text>
                 </TouchableOpacity>
@@ -55,7 +55,7 @@ const ScreenHome = ({ navigation }: { navigation?: any }) => {
                         nextFocusLeft: 'side-menu',
                         animatorOptions: focusAnimation,
                     }}
-                    {...testProps('template-screen-home-now-try-me-button')}
+                    {...testProps('template-home-screen-now-try-me-button')}
                 >
                     <Text style={theme.styles.buttonText}>Now Try Me!</Text>
                 </TouchableOpacity>
@@ -67,14 +67,14 @@ const ScreenHome = ({ navigation }: { navigation?: any }) => {
                         focusOptions={{
                             forbiddenFocusDirections: ['left'],
                         }}
-                        {...testProps('template-screen-home-navigate-to-github')}
+                        {...testProps('template-home-screen-github-button')}
                     >
                         <Icon name="github" size={theme.static.iconSize} color={theme.static.colorBrand} />
                     </TouchableOpacity>
                     <TouchableOpacity
                         onPress={() => openURL('https://sdk.flexn.org')}
                         style={theme.styles.icon}
-                        {...testProps('template-screen-home-navigate-to-renative')}
+                        {...testProps('template-home-screen-chrome-button')}
                     >
                         <Icon name="chrome" size={theme.static.iconSize} color={theme.static.colorBrand} />
                     </TouchableOpacity>
@@ -84,7 +84,7 @@ const ScreenHome = ({ navigation }: { navigation?: any }) => {
                         focusOptions={{
                             forbiddenFocusDirections: ['right'],
                         }}
-                        {...testProps('template-screen-home-navigate-to-twitter')}
+                        {...testProps('template-home-screen-twitter-button')}
                     >
                         <Icon name="twitter" size={theme.static.iconSize} color={theme.static.colorBrand} />
                     </TouchableOpacity>

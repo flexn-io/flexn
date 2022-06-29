@@ -67,7 +67,7 @@
         "tslib": "2.3.1"
     },
     "devDependencies": {
-        "@flexn/graybox": "0.16.1-alpha.2",
+        "@flexn/graybox": "0.16.1-alpha.3",
         "@flexn/template": "0.16.1-alpha.2",
         "@rnv/engine-lightning": "0.36.0-canary.13",
         "@rnv/engine-rn": "0.36.0-canary.13",

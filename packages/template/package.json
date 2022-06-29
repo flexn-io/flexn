@@ -49,7 +49,7 @@
         "@lightningjs/ui-components": "^1.2.1"
     },
     "devDependencies": {
-        "@flexn/graybox": "0.16.1-alpha.2",
+        "@flexn/graybox": "0.16.1-alpha.3",
         "@flexn/sdk": "0.16.1-alpha.2",
         "@flexn/typescript": "0.1.4",
         "@react-native-community/cli": "^6.0.0",

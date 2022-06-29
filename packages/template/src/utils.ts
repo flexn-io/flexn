@@ -6,7 +6,7 @@ import {
     getWidth
 } from './imports';
 
-export function testProps(testId = '') {
+export function testProps(testId: string | undefined) {
     if (!testId) {
         return;
     }

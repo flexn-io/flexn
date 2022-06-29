@@ -77,7 +77,6 @@ const Menu = ({ navigation }) => {
                     name="md-home"
                     size={theme.static.iconSize}
                     color={theme.static.colorBrand}
-                    {...testProps('template-menu-home-icon')}
                 />
                 <AnimatedText
                     style={[
@@ -95,13 +94,12 @@ const Menu = ({ navigation }) => {
             <TouchableOpacity
                 onPress={() => navigate(ROUTES.CAROUSELS)}
                 style={theme.styles.menuButton}
-                {...testProps('template-menu-my-page-button')}
+                {...testProps('template-menu-carousels-button')}
             >
                 <Icon
                     name="md-rocket"
                     size={theme.static.iconSize}
                     color={theme.static.colorBrand}
-                    {...testProps('template-menu-my-page-rocket-icon')}
                 />
                 <AnimatedText
                     style={[
@@ -128,7 +126,6 @@ const Menu = ({ navigation }) => {
                     name="ios-albums"
                     size={theme.static.iconSize}
                     color={theme.static.colorBrand}
-                    {...testProps('template-menu-my-modal-albums-icon')}
                 />
                 <AnimatedText
                     style={[

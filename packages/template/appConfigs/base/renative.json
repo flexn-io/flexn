@@ -94,9 +94,8 @@
                     "title": "Flexn Debug"
                 },
                 "test": {
-                    "runScheme": "Release",
+                    "runScheme": "Debug",
                     "bundleAssets": true,
-                    "bundleIsDev": false,
                     "sdk": "iphonesimulator"
                 },
                 "canary": {
@@ -162,9 +161,8 @@
                     "title": "Flexn Debug"
                 },
                 "test": {
-                    "runScheme": "Release",
+                    "runScheme": "Debug",
                     "bundleAssets": true,
-                    "bundleIsDev": false,
                     "sdk": "appletvsimulator"
                 },
                 "canary": {
@@ -211,9 +209,8 @@
                     "bundleAssets": false
                 },
                 "test": {
-                    "runScheme": "Release",
-                    "bundleAssets": true,
-                    "bundleIsDev": false
+                    "runScheme": "Debug",
+                    "bundleAssets": true
                 },
                 "canary": {
                     "runScheme": "Release",
@@ -259,9 +256,8 @@
                     "title": "Flexn Debug"
                 },
                 "test": {
-                    "signingConfig": "Release",
-                    "bundleAssets": true,
-                    "bundleIsDev": false
+                    "signingConfig": "Debug",
+                    "bundleAssets": true
                 },
                 "canary": {
                     "signingConfig": "Release",
@@ -298,9 +294,8 @@
                     "bundleAssets": false
                 },
                 "test": {
-                    "signingConfig": "Release",
-                    "bundleAssets": true,
-                    "bundleIsDev": false
+                    "signingConfig": "Debug",
+                    "bundleAssets": true
                 },
                 "canary": {
                     "signingConfig": "Release",
@@ -334,9 +329,8 @@
                     "bundleAssets": false
                 },
                 "test": {
-                    "signingConfig": "Release",
-                    "bundleAssets": true,
-                    "bundleIsDev": false
+                    "signingConfig": "Debug",
+                    "bundleAssets": true
                 },
                 "canary": {
                     "signingConfig": "Release",
@@ -370,9 +364,8 @@
                     "bundleAssets": false
                 },
                 "test": {
-                    "signingConfig": "Release",
-                    "bundleAssets": true,
-                    "bundleIsDev": false
+                    "signingConfig": "Debug",
+                    "bundleAssets": true
                 },
                 "canary": {
                     "signingConfig": "Release",
@@ -458,7 +451,6 @@
                 },
                 "test": {
                     "bundleAssets": false,
-                    "bundleIsDev": false,
                     "environment": "development"
                 },
                 "canary": {
